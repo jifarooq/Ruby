@@ -10,7 +10,7 @@ class Board
   
   def check_rows(a_board)
     a_board.each do |row|
-      return row.first if row.all? {|term| row.first == term} 
+      return row.first if row.all? {|mark| row.first == mark} 
     end
     
     false
@@ -38,7 +38,8 @@ class Board
   end
     
   def winner
-    (check_rows(@board) || check_rows(@board.transpose) || check_diagonal1(@board) || check_diagonal2(@board))
+    (check_rows(@board) || check_rows(@board.transpose) 
+      || check_diagonal1(@board) || check_diagonal2(@board))
   end
   
   def place_mark(pos, mark)
@@ -50,13 +51,14 @@ class Board
       place_mark(pos, mark)
       return true
     end
+
     false
   end
   
   def valid_move?(pos)
     @board[pos.first][pos.last].nil? && 
-    pos.first.between?(0, @board.size) &&
-    pos.last.between?(0, @board.size)
+      pos.first.between?(0, @board.size) &&
+      pos.last.between?(0, @board.size)
   end
   
   def to_s
