@@ -1,5 +1,3 @@
-# app_academy
-
 Projects include:
  - Number in words
  - Guess number game, Rock-paper-scissors, tic-tac-toe
