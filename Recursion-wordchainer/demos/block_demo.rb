@@ -40,10 +40,6 @@ proc = Proc.new { |name| puts "#{name} has no last name" }
 do_each(names, proc) 
 
 
-
-
-
-
 def measure (num_repeats = 1)
   t1 = Time.now
   num_repeats.times {yield}

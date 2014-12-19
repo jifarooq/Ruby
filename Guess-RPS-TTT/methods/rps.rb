@@ -1,5 +1,4 @@
 def rps(choice)
-  
   choices = ['rock', 'paper', 'scissors']
 
   unless choices.include?(choice.downcase)
@@ -7,7 +6,6 @@ def rps(choice)
   end
   
   comp_choice = choices[rand(choices.size)]
-  
   
   possible_outcomes = {
     ['rock', 'scissors'] => "You win!",

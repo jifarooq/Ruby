@@ -27,12 +27,12 @@ class Hangman
       display
       choice = @guessing_player.get_user_input
       add_to_player_guesses(choice)
-      @picking_player.check_letter_and_position( choice, @guessing_player)
+      @picking_player.check_letter_and_position(choice, @guessing_player)
       @guessing_player.update_game_state(@guessing_player)
     end
     
     if @guessing_player.solved? 
-      (puts "Congrats #{ @guessing_player.name }! You've solved the word in #{MAX_TRIES-@guessing_player.tries} guesses") 
+      (puts "Congrats #{ @guessing_player.name }! You've solved the word in #{MAX_TRIES - @guessing_player.tries} guesses") 
     else 
       (puts "#{ @guessing_player.name }, you're out of guesses.  You lose.") 
     end
@@ -199,8 +199,8 @@ class CompPlayer < Player
 end
 
 
-auster = HumanPlayer.new("Auster")
 justin = HumanPlayer.new("Justin")
+auster = HumanPlayer.new("Auster")
 comp = CompPlayer.new
 comp2 = CompPlayer.new('computer2')
 test = Hangman.new(justin, comp)

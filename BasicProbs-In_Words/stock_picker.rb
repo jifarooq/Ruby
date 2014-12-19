@@ -11,8 +11,7 @@ def stock_picker(prices)
     end
   end
   
-  if indices.empty? then "No profit." else indices end
-  # indices.empty? ? "No profit." : indices
+  (indices.empty?) ? "No profit" : indices
 end
 
 rand_prices = Array.new(10) { (1..10).to_a.sample }

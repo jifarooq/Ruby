@@ -60,5 +60,6 @@ def eval_block(*args, &proc)
   unless block_given?
     return "NO BLOCK GIVEN!"
   end
-    proc.call(*args)
+  
+  proc.call(*args)
 end

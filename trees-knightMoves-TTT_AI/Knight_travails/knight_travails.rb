@@ -55,22 +55,24 @@ end
 test = KnightPathFinder.new([0,0])
 test.find_path([7, 7])
 
-# all_positions = []
-# (0..7).each do |row|
-#   (0..7).each do |col|
-#     all_positions << [row, col]
-#   end
-# end
-#
-# all_step_counts = []
-# all_positions.each do |start_pos|
-#   all_positions.each do |end_pos|
-#     all_step_counts << KnightPathFinder.new(start_pos).find_path(end_pos).size
-#   end
-# end
-#
+# Code below answers this question:
+# At most how many moves does it take a knight to move from any one position
+# to another on the board?
+
+all_positions = []
+(0..7).each do |row|
+  (0..7).each do |col|
+    all_positions << [row, col]
+  end
+end
+
+all_step_counts = []
+all_positions.each do |start_pos|
+  all_positions.each do |end_pos|
+    all_step_counts << KnightPathFinder.new(start_pos).find_path(end_pos).size
+  end
+end
+
 # all_positions.each do |end_pos|
 #   p KnightPathFinder.new([0,0]).find_path(end_pos).size, end_pos
 # end
-#
-# KnightPathFinder.new([7,7]).find_path([0,0])

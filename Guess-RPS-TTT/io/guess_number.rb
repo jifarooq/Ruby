@@ -22,7 +22,7 @@ class NumberGame
       puts "Choose a number from 1 to 100"          
       guess = Integer(gets.chomp)
       raise OutOfRangeError
-        .new("Must be between 1 and 100") unless guess.between?(1,100)
+        .new("Must be between 1 and 100") unless guess.between?(1, 100)
     rescue ArgumentError => error
       puts error
       retry

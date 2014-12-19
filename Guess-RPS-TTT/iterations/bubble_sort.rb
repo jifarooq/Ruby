@@ -4,8 +4,8 @@ def bubble_sort(array)
 	until sorted
 		sorted = true
 		(0...new_arr.size - 1).each do |idx|
-			if new_arr[idx] > new_arr[idx+1]
-				new_arr[idx], new_arr[idx+1] = new_arr[idx+1], new_arr[idx]
+			if new_arr[idx] > new_arr[idx + 1]
+				new_arr[idx], new_arr[idx + 1] = new_arr[idx + 1], new_arr[idx]
 				sorted = false
 			end
 		end

@@ -1,5 +1,4 @@
 def my_loop
-  
   i = 251
   
   until i % 7 == 0

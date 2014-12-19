@@ -37,7 +37,7 @@ end
 
 def fibonacci(num)
   return [0] if num == 1
-  return [0,1] if num == 2
+  return [0, 1] if num == 2
   result = []
   result += fibonacci(num - 1)
   result << result[-1] + result[-2]

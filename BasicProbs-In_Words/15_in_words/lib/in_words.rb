@@ -59,7 +59,6 @@ class Fixnum
     else 
       magnitude = find_magnitude
       
-      #solution copied! :(
       magnitude_words = (self / magnitude).in_words + " " + MAGNITUDES[magnitude]
       (self % magnitude) > 0 ? magnitude_words + ' ' + (self % magnitude).in_words : magnitude_words
     end
@@ -70,16 +69,3 @@ class Fixnum
   end
   
 end
-    
-=begin
-    until remainder.zero? 
-      case remainder 
-      when 0..9
-        string_num << single_digits(remainder)
-        remainder = 0
-      else
-        remainder = 0
-      end
-    end
-  end
-=end
